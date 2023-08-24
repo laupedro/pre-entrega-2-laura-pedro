@@ -1,0 +1,142 @@
+/*reseteo css*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ 
+ /*cambio de conf de raiz para q 1 rem sea 10*/
+html {
+    font-size: 62.5%;
+}
+
+.falso-body {
+  display: grid;
+  
+  /*grid template areas*/
+  grid-template-areas: 
+    "headerTest navTest"
+    "cajaparrafoslargosTest imagenesslideTest"
+    "footerTest footerTest";
+  padding-top: 3% ;
+  padding-left: 5% ;
+  padding-right: 5% ;
+  padding-bottom: 5% ;
+  grid-template-columns: 40%;
+  
+}
+
+/*aplicacion de media queries para adaptar a pantallas*/
+@media screen and (width < 520px) {
+	.falso-body {
+       
+        grid-template-areas: 
+            "headerTest"
+            "navTest"
+            "cajaparrafoslargosTest"
+            "imagenesslideTest"
+            "footerTest";
+        
+         grid-template-columns: 100%;
+         align-self: center;
+    }
+}
+
+
+header {
+  grid-area: headerTest;
+  border: 1px solid;
+  display: flex;
+  
+}
+header img {
+  align-self: center;
+}
+
+nav {
+  grid-area: navTest;
+  /*border: 1px solid;*/
+} 
+ 
+
+/*llamar a las class*/
+.titular1{
+    color:black;
+    font-size: 65px;
+    font-family:'Barlow Semi Condensed', sans-serif;
+}
+.titular2{
+  color:black;
+  font-size: 49px;
+  font-family:'Barlow Semi Condensed', sans-serif;
+  font-weight:normal;
+  font-stretch: extra-condensed;
+}
+
+.cajaparrafoslargos {
+  /* background-color: chartreuse; */
+  text-align: justify;
+  overflow: auto;
+  grid-area: cajaparrafoslargosTest;
+  /* border: 1px solid; */
+  padding: 15px 15px 15px 15px;
+}
+.subtitulos {
+  color: rgb(87, 86, 86);
+  font-size: 24px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: bold;
+  font-stretch: condensed;
+}
+
+.textos {
+  font-size: 14px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: normal;
+  overflow-y: auto;
+  margin-top: 5px;
+}
+
+/*le puse color de border a algunos elementos, es provisorio para visualizar mejor*/
+/*todavia me falta customizar estilos con paleta de color etc*/
+
+
+
+.imagenesslide{
+  grid-area: imagenesslideTest;
+  border: 1px solid;
+}
+.imagenesslide img {
+  width: 100%;
+  
+
+}
+
+footer{
+  color: greenyellow;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.7);
+  grid-area: footerTest ;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style-type: none;
+  display: inline;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+} 
+
+ul li{
+  display: inline-block;
+  padding: 30px;
+}
+
+
+
+
+
